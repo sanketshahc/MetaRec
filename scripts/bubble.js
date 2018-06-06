@@ -22,7 +22,7 @@ var pack = d3.pack()
 // }, 
 
 function bubbleTwo(classes) {
-//   if () throw ;
+//   if (error) throw error ;
   var root = d3.hierarchy({children: classes})
       .sum(function(d) { return d.value; })
       .each(function(d) {

@@ -27,6 +27,7 @@ searchBox.addListener('places_changed', function() {
     arrPhotosURLs = arrPhotos.map(photo=>photo.getUrl(dimPhoto));
     var arrPhotoPromises = arrPhotosURLs.map(url => {
         $('[data-placecontent]').append($('<img>',{
+            'class': 'card',
             'src': url}))
 
         var visionRequest = {
@@ -80,14 +81,9 @@ searchBox.addListener('places_changed', function() {
         })
         .then(bubbleTwo)
 
-        
-
 });
-    
 
 
-
-// google language api
 
 var languageRequest = {
     "document": {
@@ -102,14 +98,3 @@ $.ajax({
     data: JSON.stringify(languageRequest),
     contentType: "application/json"
   }).then(response=>{console.log(response)})
-
-
-//   0:
-//     formatted_phone_number: "(404) 996-2623"
-//     name: "Cooks & Soldiers"
-//     photos:(10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
-//     place_id:"ChIJLTcZFewE9YgRHsW7wP1bEYs"
-//     price_level:3
-//     rating:4.6
-//     reviews: (5) [{…}, {…}, {…}, {…}, {…}]
-//     website:"http://cooksandsoldiers.com/"
