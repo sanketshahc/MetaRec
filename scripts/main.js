@@ -17,6 +17,8 @@ var arrLabels;
 var bubbleArray;
 var histogram;
 searchBox.addListener('places_changed', function() {
+    $('[data-placecontent]').empty();
+    $('svg').empty();
     places = searchBox.getPlaces();
     console.log(places);
     arrPhotos = places[0]["photos"]
