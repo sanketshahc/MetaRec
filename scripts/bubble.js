@@ -1,3 +1,7 @@
+/*//
+This code below was taken from an opensource repo.
+*/
+
 var svg = d3.select("svg"),
     width = +svg.attr("width"),
     height = +svg.attr("height");
