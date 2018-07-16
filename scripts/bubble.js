@@ -1,5 +1,5 @@
 /*//
-This code below was taken from an opensource repo.
+This code below was taken from an opensource repo, and modified to work with RestaurantMetaRec.
 */
 
 var svg = d3.select("svg"),
